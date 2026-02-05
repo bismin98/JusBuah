@@ -1,3 +1,7 @@
+"use client";
+
+import { MapPinIcon, PhoneIcon, EnvelopeIcon, ClockIcon } from "@heroicons/react/24/outline";
+
 export default function Contact() {
   return (
     <section id="kontak" className="py-12 md:py-20 bg-linear-to-br from-purple-50 to-pink-50">
@@ -14,7 +18,7 @@ export default function Contact() {
             </h3>
             <div className="space-y-4 md:space-y-5">
               <div className="flex items-start space-x-3 md:space-x-4 pb-4 border-b border-gray-100">
-                <div className="text-2xl md:text-3xl">📍</div>
+                <MapPinIcon className="w-6 md:w-7 h-6 md:h-7 text-orange-500 flex-shrink-0 mt-0.5" />
                 <div>
                   <h4 className="text-base md:text-lg font-bold text-gray-800 mb-1">
                     Alamat
@@ -28,7 +32,7 @@ export default function Contact() {
               </div>
 
               <div className="flex items-start space-x-3 md:space-x-4 pb-4 border-b border-gray-100">
-                <div className="text-2xl md:text-3xl">📱</div>
+                <PhoneIcon className="w-6 md:w-7 h-6 md:h-7 text-pink-500 flex-shrink-0 mt-0.5" />
                 <div>
                   <h4 className="text-base md:text-lg font-bold text-gray-800 mb-1">
                     Telepon
@@ -40,7 +44,7 @@ export default function Contact() {
               </div>
 
               <div className="flex items-start space-x-3 md:space-x-4 pb-4 border-b border-gray-100">
-                <div className="text-2xl md:text-3xl">✉️</div>
+                <EnvelopeIcon className="w-6 md:w-7 h-6 md:h-7 text-purple-500 flex-shrink-0 mt-0.5" />
                 <div>
                   <h4 className="text-base md:text-lg font-bold text-gray-800 mb-1">
                     Email
@@ -52,7 +56,7 @@ export default function Contact() {
               </div>
 
               <div className="flex items-start space-x-3 md:space-x-4">
-                <div className="text-2xl md:text-3xl">⏰</div>
+                <ClockIcon className="w-6 md:w-7 h-6 md:h-7 text-red-500 flex-shrink-0 mt-0.5" />
                 <div>
                   <h4 className="text-base md:text-lg font-bold text-gray-800 mb-1">
                     Jam Operasional

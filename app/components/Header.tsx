@@ -1,6 +1,7 @@
 "use client";
 
 import { useState } from "react";
+import Image from "next/image";
 import { InformationCircleIcon, ShoppingBagIcon, PhoneIcon, Bars3Icon, XMarkIcon } from "@heroicons/react/24/outline";
 
 export default function Header() {
@@ -21,10 +22,17 @@ export default function Header() {
           <nav className="flex items-center justify-between">
             {/* Logo */}
             <div className="flex items-center space-x-2">
-              <div className="text-3xl md:text-4xl">🍊</div>
-              <span className="text-xl md:text-2xl font-bold bg-linear-to-r from-orange-500 via-pink-500 to-purple-500 text-transparent bg-clip-text">
-                Fresh Juice
-              </span>
+              <div className="relative h-8 w-32 md:h-10 md:w-40">
+                <Image
+                  src="/images/logojus2.png"
+                  alt="Fresh Juice"
+                  fill
+                  sizes="(max-width: 768px) 128px, 160px"
+                  className="object-contain"
+                  quality={100}
+                  priority
+                />
+              </div>
             </div>
 
             {/* Desktop Navigation Menu */}

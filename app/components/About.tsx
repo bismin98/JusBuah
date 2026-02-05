@@ -1,3 +1,5 @@
+import { SparklesIcon, FireIcon, HeartIcon } from "@heroicons/react/24/outline";
+
 export default function About() {
   return (
     <section id="tentang" className="py-12 md:py-20 bg-linear-to-br from-orange-50 to-pink-50">
@@ -21,7 +23,9 @@ export default function About() {
         {/* Features */}
         <div className="grid grid-cols-3 gap-3 md:gap-8 mt-8 md:mt-16">
           <div className="text-center p-3 md:p-6 bg-white rounded-lg md:rounded-2xl shadow-lg hover:shadow-2xl transition-shadow duration-300">
-            <div className="text-3xl md:text-5xl mb-2 md:mb-4">🍎</div>
+            <div className="flex justify-center mb-2 md:mb-4">
+              <SparklesIcon className="w-8 md:w-12 h-8 md:h-12 text-orange-500" />
+            </div>
             <h3 className="text-sm md:text-xl font-bold text-orange-500 mb-1 md:mb-2">
               100% Alami
             </h3>
@@ -30,7 +34,9 @@ export default function About() {
             </p>
           </div>
           <div className="text-center p-3 md:p-6 bg-white rounded-lg md:rounded-2xl shadow-lg hover:shadow-2xl transition-shadow duration-300">
-            <div className="text-3xl md:text-5xl mb-2 md:mb-4">💪</div>
+            <div className="flex justify-center mb-2 md:mb-4">
+              <FireIcon className="w-8 md:w-12 h-8 md:h-12 text-pink-500" />
+            </div>
             <h3 className="text-sm md:text-xl font-bold text-pink-500 mb-1 md:mb-2">
               Penuh Vitamin
             </h3>
@@ -39,7 +45,9 @@ export default function About() {
             </p>
           </div>
           <div className="text-center p-3 md:p-6 bg-white rounded-lg md:rounded-2xl shadow-lg hover:shadow-2xl transition-shadow duration-300">
-            <div className="text-3xl md:text-5xl mb-2 md:mb-4">😋</div>
+            <div className="flex justify-center mb-2 md:mb-4">
+              <HeartIcon className="w-8 md:w-12 h-8 md:h-12 text-purple-500" />
+            </div>
             <h3 className="text-sm md:text-xl font-bold text-purple-500 mb-1 md:mb-2">
               Rasa Lezat
             </h3>

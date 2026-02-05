@@ -1,9 +1,11 @@
+import Image from "next/image";
+
 export default function Products() {
   const products = [
     {
       id: 1,
       name: "Orange Blast",
-      emoji: "🍊",
+      image: "https://images.pexels.com/photos/312418/pexels-photo-312418.jpeg?w=500&h=500&fit=crop",
       description: "Jus jeruk segar kaya vitamin C untuk meningkatkan imunitas",
       price: "Rp 25.000",
       gradient: "from-orange-400 to-orange-600",
@@ -12,7 +14,7 @@ export default function Products() {
     {
       id: 2,
       name: "Strawberry Dream",
-      emoji: "🍓",
+      image: "https://images.pexels.com/photos/5632399/pexels-photo-5632399.jpeg?w=500&h=500&fit=crop",
       description: "Jus strawberry manis dengan antioksidan tinggi",
       price: "Rp 30.000",
       gradient: "from-red-400 to-pink-600",
@@ -21,7 +23,7 @@ export default function Products() {
     {
       id: 3,
       name: "Kiwi Fresh",
-      emoji: "🥝",
+      image: "https://images.pexels.com/photos/3407857/pexels-photo-3407857.jpeg?w=500&h=500&fit=crop",
       description: "Jus kiwi segar dengan rasa unik dan menyegarkan",
       price: "Rp 28.000",
       gradient: "from-green-400 to-green-600",
@@ -30,7 +32,7 @@ export default function Products() {
     {
       id: 4,
       name: "Watermelon Splash",
-      emoji: "🍉",
+      image: "https://images.pexels.com/photos/8473563/pexels-photo-8473563.jpeg?w=500&h=500&fit=crop",
       description: "Jus semangka dingin yang super menyegarkan",
       price: "Rp 22.000",
       gradient: "from-red-500 to-red-700",
@@ -39,7 +41,7 @@ export default function Products() {
     {
       id: 5,
       name: "Grape Paradise",
-      emoji: "🍇",
+      image: "https://images.pexels.com/photos/6002087/pexels-photo-6002087.jpeg?w=500&h=500&fit=crop",
       description: "Jus anggur manis dengan antioksidan alami",
       price: "Rp 27.000",
       gradient: "from-purple-400 to-purple-600",
@@ -48,7 +50,7 @@ export default function Products() {
     {
       id: 6,
       name: "Pineapple Tropic",
-      emoji: "🍍",
+      image: "https://images.pexels.com/photos/3962286/pexels-photo-3962286.jpeg?w=500&h=500&fit=crop",
       description: "Jus nanas tropis yang manis dan menyegarkan",
       price: "Rp 26.000",
       gradient: "from-yellow-400 to-orange-500",
@@ -80,10 +82,12 @@ export default function Products() {
               key={product.id}
               className="bg-white rounded-lg md:rounded-2xl overflow-hidden shadow-lg hover:shadow-2xl transition-all duration-300 active:scale-95 md:hover:scale-105"
             >
-              <div
-                className={`h-32 sm:h-40 md:h-48 bg-linear-to-br ${product.gradient} flex items-center justify-center`}
-              >
-                <span className="text-5xl sm:text-6xl md:text-8xl">{product.emoji}</span>
+              <div className="relative h-40 sm:h-48 md:h-56 bg-gray-100 flex items-center justify-center overflow-hidden">
+                <img
+                  src={product.image}
+                  alt={product.name}
+                  className="w-full h-full object-cover"
+                />
               </div>
               <div className="p-3 sm:p-4 md:p-6">
                 <h3 className={`text-base sm:text-xl md:text-2xl font-bold ${product.color} mb-1 sm:mb-2`}>
